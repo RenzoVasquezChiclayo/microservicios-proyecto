@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #eee;
+}
+
+#side_nav{
+    background: rgb(0,0,0);
+    background: orange;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    transition: all .3s;
+}
+
+.content{
+    min-height: 100vh;
+    width: 100%;
+}
+
+hr.h-color{
+    background: #eee;
+}
+
+.sidebar li.active{
+    background: white;
+    border-radius: 8px;
+}
+
+.sidebar li.active a,
+.sidebar li.active a:hover{
+    color: #000;
+}
+
+.sidebar li a{
+    color: #fff;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+body.hamburguesa .main-container .sidebar{
+    display: none;
+}
+
+.modo-tema{
+    cursor: pointer;
+    margin: 10px 50px;
+}
+
+.modo-tema .contenido:hover{
+    background: white;
+    color: black;
+    border-radius: 8px;
+}
+
+.options-lateral a:hover{
+    background: #eee;
+    color: black;
+    border-radius: 8px;
+}
+
+.modo-tema .contenido .icons .sol{
+    display: none;
+}
+
+.modo-tema .contenido .icons .luna{
+    display: inline;
+}
+
+body.tema .modo-tema .contenido .icons .sol{
+    display: inline;
+}
+
+body.tema .modo-tema .contenido .icons .luna{
+    display: none;
+}
+
+body.tema .content{
+    background: #36393F;
+    color: white;
+}
+
+@media(max-width: 767px){
+    #side_nav{
+        margin-left: -250px;
+        position: fixed;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    #side_nav.active{
+        margin-left: 0;
+    }
+
+    .icon{
+        display: none;
+    }
+}

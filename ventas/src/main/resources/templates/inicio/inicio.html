@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <title>Inicio</title>
+</head>
+<body>
+    <header th:replace="/plantilla/fragment :: header"></header>
+    <section>
+        <div class="container-fluid">
+            <div th:classappend="'alert-' + (${clase != null} ? ${clase} : info)" th:if="${mensaje != null}"
+                    th:text="${mensaje}"
+                    class="alert">
+            </div>
+            <div class="row">
+                <img class="img-fluid" width="100%" src="/img/delivery.jpg" alt="Nose encontró la imagen">
+            </div>
+            <div style="margin: 50px;"></div>
+            <div>
+                <h2 class="pag"><b>MOSTRANDO 1 - 4 DE 4 RESULTADOS</b></h2>
+            </div>
+            <div class="col">
+                <div class="row myp">
+                    <div class="col-5">
+                    <img class="img-fluid" src="/img/lomo-saltado.webp" alt="Nose encontró la imagen">
+                </div>
+
+                <div class="col-7">
+                    <h5>
+                        <div class="myp titulos-m"> Lomo Saltado</div>
+                    </h5>
+                    <span class="myp titulos-m"><b> S/. 65.00 </b></span>
+                    <p class="myp texto">
+                     ¡Si te gusta la carne y saltar, este plato debe formar parte de tu pedido.
+                    </p>
+                </div>
+                
+            </div>
+            <div style="margin: 50px;"></div>
+                <div class="row myp">
+                    <div class="col-5">
+                    <img class="img-fluid" src="/img/tallarines-verdes.jpg" alt="Nose encontró la imagen">
+                </div>
+                <div class="col-7">
+                    <h5>
+                        <div class="myp titulos-m"> Tallarines verdes</div>
+                    </h5>
+                    <div> 
+                        <span class="myp titulos-m"><b> S/. 50.00 </b></span>
+                    </div>
+                    <p class="myp texto"> 
+                        Si te gusta El Grinch este plato es para ti.
+                    </p>
+
+
+
+                </div>
+                
+            </div>
+            <div style="margin: 50px;"></div>
+                <div class="row myp">
+                    <div class="col-5">
+                    <img class="img-fluid" src="/img/bistec-pobre.jpg" alt="Nose encontró la imagen">
+                </div>
+                <div class="col-7">
+                    <h5>
+                        <div class="myp titulos-m"> Bistec a lo Castillo</div>
+                    </h5>
+                    <div> 
+                        <span class="myp titulos-m"><b> S/. 75.00 </b></span>
+                    </div>
+                    <p class="myp texto"> 
+                        ¡Si te sientes engañado con las promesas de Castillo en campaña, este plato es para ti.
+                    </p>
+                
+                </div>
+                </div>
+            <div style="margin: 50px;"></div>
+                <div class="row myp">
+                    <div class="col-5">
+                        <img class="img-fluid" src="/img/ceviche-mixto.jpg" alt="Nose encontró la imagen">
+                    </div>
+                    <div class="col-7">
+                        <h5>
+                            <div class="myp titulos-m"> Ceviche mixto</div>
+                        </h5>
+                        <div> 
+                            <span class="myp titulos-m"><b> S/. 60.00 </b></span>
+                        </div>
+                        <p class="myp texto"> 
+                            Si te sientes bien peruano hoy, debes pedir este plato, pero si lo pides sin aji, mejor retirate piden en otro restaurante.
+                        </p>
+                </div>
+                </div>
+            </div>
+                
+            <div style="margin: 50px;"></div>
+     
+            </div>
+
+    </section>
+    <section class="section2">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="sec">RapidFuut</h1><br>
+                <div class="sec2">
+                    <a class="sec2" href="">Nosotros</a>
+                    <hr class="divi">
+                </div>
+                
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <footer th:replace="/plantilla/fragment :: footer"></footer>
+</body>
+</html>
