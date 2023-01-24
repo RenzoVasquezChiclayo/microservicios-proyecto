@@ -1,6 +1,29 @@
 server:
   port: 8002
+spring:
+  application:
+    name: MsProductos
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/ventas
+    username: postgres
+    password: laudecorazon123
+    initialization-mode: always
+    continue-on-error: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
 eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
   client:
     fetch-registry: true
     register-with-eureka: true
