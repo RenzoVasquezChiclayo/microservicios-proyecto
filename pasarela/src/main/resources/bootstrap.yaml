@@ -1,6 +1,6 @@
 spring:
   application:
-    name: Pasarela
+    name: pasarela
   cloud:
     config:
     enabled: true

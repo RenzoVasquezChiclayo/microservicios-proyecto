@@ -17,7 +17,7 @@ spring:
         locator:
           enabled: true
       routes:
-        - id: MsProductos
+        - id: msproductos
           uri: lb://MSPRODUCTOS
           predicates:
             - Path=/productos/**

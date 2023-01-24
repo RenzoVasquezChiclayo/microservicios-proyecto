@@ -1,6 +1,6 @@
 spring:
   application:
-    name: ventas
+    name: msventas
   cloud:
     config:
     enabled: true
@@ -17,3 +17,14 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
+  freemarker:
+    cache: false
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        Type: TRACE

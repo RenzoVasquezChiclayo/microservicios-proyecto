@@ -1,19 +1,8 @@
 server:
   port: 8001
 spring:
-  freemarker:
-    cache: false
-  main:
-    allow-circular-references: true
-    allow-bean-definition-overriding: true
   application:
-    name: MsVentas
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: DEBUG
-        Type: TRACE
+    name: msventas
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
