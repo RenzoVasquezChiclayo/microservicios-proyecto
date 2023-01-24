@@ -5,3 +5,15 @@ spring:
     config:
     enabled: true
     uri: http://localhost:8081
+  datasource:
+    url: jdbc:mysql://localhost:3307/ventas
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+    initialize: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update

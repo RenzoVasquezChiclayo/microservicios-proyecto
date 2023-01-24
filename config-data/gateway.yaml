@@ -1,19 +1,5 @@
 server:
-  port: 8001
-spring:
-  freemarker:
-    cache: false
-  main:
-    allow-circular-references: true
-    allow-bean-definition-overriding: true
-  application:
-    name: MsVentas
-logging:
-  level:
-    org:
-      hibernate:
-        SQL: DEBUG
-        Type: TRACE
+  port: 8080
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
@@ -24,3 +10,14 @@ eureka:
       default-zone: http://localhost:8761/eureka
     instance:
       hostname: localhost
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: MsProductos
+          uri: lb://MSPRODUCTOS
+          predicates:
+            - Path=/productos/**
