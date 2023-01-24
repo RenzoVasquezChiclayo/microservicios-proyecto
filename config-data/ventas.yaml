@@ -2,7 +2,7 @@ server:
   port: 8002
 spring:
   application:
-    name: msventas
+    name: ventas
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: msventas
+    name: ventas
   cloud:
     config:
       enabled: true
