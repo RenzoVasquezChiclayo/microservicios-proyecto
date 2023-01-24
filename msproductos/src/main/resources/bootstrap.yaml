@@ -3,8 +3,8 @@ spring:
     name: msproductos
   cloud:
     config:
-    enabled: true
-    uri: http://localhost:8081
+      enabled: true
+      uri: http://localhost:8081
   datasource:
     driver-class-name: org.postgresql.Driver
     platform: postgres

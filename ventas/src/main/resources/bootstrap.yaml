@@ -3,8 +3,8 @@ spring:
     name: msventas
   cloud:
     config:
-    enabled: true
-    uri: http://localhost:8081
+      enabled: true
+      uri: http://localhost:8081
   datasource:
     url: jdbc:mysql://localhost:3307/ventas
     username: root
